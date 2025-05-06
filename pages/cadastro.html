@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: #050b2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    #cadastro {
+      background-color: #f08a13;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+      padding: 50px;
+      border-radius: 20px;
+    }
+
+    .inputs {
+      width: 200px;
+      height: 20px;
+      padding: 15px;
+      border-radius: 20px;
+      border: none;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #3498db;
+      width: 200px;
+      height: 40px;
+      padding: 15px;
+      border-radius: 15px;
+      border: none;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #050b2f;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="cadastro">
+      <h2>Cadastro</h2>
+
+      <input class="inputs" type="text" id="login" placeholder="Digite um login">
+      <input class="inputs" type="password" id="senha" placeholder="Digite uma senha">
+      <button  type="button" onclick="cadastrar()">Cadastrar</button> 
+  </div>
+
+  <script>
+    function cadastrar() {
+      const login = document.getElementById('login').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+
+      if (login && senha) {
+        localStorage.setItem('login', login);
+        localStorage.setItem('senha', senha);
+        alert("Cadastro realizado com sucesso!");
+        window.location.href = "index.html";
+      } else {
+        alert("Preencha todos os campos.");
+      }
+    }
+  </script>
+</body>
+</html>

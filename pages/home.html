@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio3</title>
+  <link rel="stylesheet" href="../styles/home.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Central de projetos Omnia</span>
+      <button onclick="openModal()" id="new">Incluir</i></button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Projeto</th>
+            <th>Prazo</th>
+            <th>Progresso</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+          <label for="m-atividade">Projeto</label>
+          <input id="m-atividade" type="text" required />
+  
+          <label for="m-prazo">Prazo</label>
+          <input id="m-prazo" type="date" required />
+  
+          <label for="m-progresso">Progresso</label>
+          <select id="m-progresso" required>
+            <option value="">Selecione o progresso</option>
+            <option value="pendente">pendente</option>
+            <option value="em-andamento">Em andamento</option>
+            <option value="concluido">Concluído</option>
+          </select>
+          <button id="btnSalvar">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="../js/home.js"></script>
+</body>
+
+</html>
